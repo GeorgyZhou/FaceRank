@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.usc.michaelzhou.facerank.ui.MainActivity">
+
+
+    <FrameLayout
+        android:layout_width = "368dp"
+        android:layout_height = "417dp"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:id = "@+id/frame_layout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <ImageView
+            android:id="@+id/welcome_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/welcome_image"/>
+
+
+        <ListView
+            android:id = "@+id/result_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="14dp"
+            android:layout_centerHorizontal="true" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/photo_upload_button"
+        android:layout_width="368dp"
+        android:layout_height="80dp"
+        android:onClick="upload"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="443dp"
+        android:text="@string/upload_your_photo"
+        style="@style/ButtonStyle"
+        android:layout_below="@+id/frame_layout"
+        android:layout_alignLeft="@+id/frame_layout"
+        android:layout_alignStart="@+id/frame_layout" />
+</RelativeLayout>

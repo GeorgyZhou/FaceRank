@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FaceRank</string>
+
+    <string name="subscription_key">c3421d2648b64ef6a685860e73fb4c55</string>
+
+
+    <!-- MainActivity -->
+    <string name="fail_to_detect">Fail To Detect. Try Again</string>
+    <string name="try_another">Try Another Photo</string>
+    <string name="upload_your_photo">Upload Your Photo</string>
+    <string name="begin_rank">Begin Rank</string>
+
+    <!-- SelectPicActivity -->
+    <string name="select_an_image">Select an Image</string>
+    <string name="take_photo">Take a Photo</string>
+    <string name="select_image_in_album">From Gallery</string>
+
+    <!-- Process Dialog-->
+    <string name="progress_dialog_title">Please wait</string>
+
+</resources>
