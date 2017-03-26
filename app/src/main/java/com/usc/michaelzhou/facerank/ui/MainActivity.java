@@ -194,22 +194,20 @@ public class MainActivity extends AppCompatActivity {
             double faceAge = (double)faces.get(position).faceAttributes.age;
             String faceGender = faces.get(position).faceAttributes.gender;
             double smile = (double)faces.get(position).faceAttributes.smile;
-            String glasses = faces.get(position).faceAttributes.glasses.toString();
-            String emotion = getEmotion(faces.get(position).faceAttributes.emotion);
-            double headPose = Double.parseDouble(faces.get(position).faceAttributes.headPose.toString());
 
-            //double score = (faceGender == "female" ? 1.0 : 0.0) + smile * 10.0 + (glasses.equals(""));
+            double score = (faceGender == "female" ? 1.0 : 0.0) + smile * 10.0 + 100.0 - faceAge;
 
             // Show the face details.
             DecimalFormat formatter = new DecimalFormat("#0.0");
-            String face_description = String.format("Age: %s\nGender: %s\nSmile: %s\nGlasses: %s\nFacialHair: %s\nHeadPose: %s\n",
+            String face_description = String.format("Age: %s\nGender: %s\nSmile: %s\nGlasses: %s\nFacialHair: %s\nEmotion:%s\nScore:%s\n",
                     faces.get(position).faceAttributes.age,
                     faces.get(position).faceAttributes.gender,
                     faces.get(position).faceAttributes.smile,
                     faces.get(position).faceAttributes.glasses,
                     getFacialHair(faces.get(position).faceAttributes.facialHair),
-                    getHeadPose(faces.get(position).faceAttributes.headPose),
-                    getEmotion(faces.get(position).faceAttributes.emotion)
+                    getEmotion(faces.get(position).faceAttributes.emotion),
+                    //getHeadPose(faces.get(position).faceAttributes.headPose),
+                    score
             );
             ((TextView) convertView.findViewById(R.id.text_detected_face)).setText(face_description);
 
